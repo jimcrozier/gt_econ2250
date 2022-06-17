@@ -1,2 +1,2 @@
-# gt_econ2250
+# ECON2250
 Statistics for Econ
