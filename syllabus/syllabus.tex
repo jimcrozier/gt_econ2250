@@ -1,9 +1,9 @@
 \documentclass[11pt]{article}
 \usepackage{fullpage}
 \usepackage[left=1in,top=1in,right=1in,bottom=1in,headheight=3ex,headsep=3ex]{geometry}
-
+\usepackage[T1]{fontenc}
 \newcommand{\blankline}{\quad\pagebreak[2]}
-
+\usepackage{multirow}
 \title{ECON 2250: Statistics for Economists}
 \author{Jim Crozier}
 \date{Fall 2022}
@@ -11,7 +11,7 @@
 \usepackage[sc]{mathpazo}
 \linespread{1.05}         % Palatino needs more leading (space between lines)
 \usepackage[T1]{fontenc}
-
+\newcommand{\emdash}{\nobreak-\nobreak\hskip0pt}
 \usepackage[mmddyyyy]{datetime}% http://ctan.org/pkg/datetime
 \usepackage{advdate}% http://ctan.org/pkg/advdate
 \newdateformat{syldate}{\twodigit{\THEMONTH}/\twodigit{\THEDAY}}
@@ -68,13 +68,17 @@
 \begin{tabular*}{.93\textwidth}{@{\extracolsep{\fill}}lr}
 
 
-  E-mail: \texttt{rcrozier3@gatech.edu} & Repo: \href{http://github.com/jimcrozier/gt\_econ2250}{\tt\bf github.com/jimcrozier/gt\_econ2250}  \\
 
-Office Hours: TBD  &  Class Hours: TBD \\
+  E-mail: \texttt{rcrozier3@gatech.edu} \\
+  Repo: \href{http://github.com/jimcrozier/gt\_econ2250}{\tt\bf github.com/jimcrozier/gt\_econ2250}  \\
 
 
-Office: TBD \\
-TA: TBD \\
+  Class Hours: MWF 12:30 - 1:20 \\
+  Class location: 	Van Leer E361 \\
+
+  Office Hours: Fridays 2-3PM  \\
+Office: 310 of the Rich Computer Center  \\
+TA: Christopher Kitchens, email: christopher.kitchens@gatech.edu \\
 &  \\
 \hline
 \end{tabular*}
@@ -86,10 +90,11 @@ TA: TBD \\
 In this class we will cover an introduction into statistical computing which is a cornerstone to economic research. The course will be about one half statistical concepts [e.g. counts, summary statistics, and the basics of building statistical models], and one half practical coding skills that are necessary for estimating these concepts. I assume that the incoming student has a general knowledge of mathematical principals, most importantly familiarity with manipulating algebraic equations as well as basic probability theory and intuition. I also assume that the student has a basic understanding of python and notebooks. Although each of these subjects will be taught from the ground up, if this is the first encounter with any of these concepts then I expect a pretty steep learning curve. 
 
 
+
+
 \section*{Course Objectives}
 \begin{enumerate}
 \item Introductory statistics proficiency (counts, summary stats, linear models, significance tests).
-\item Data munging and basic SQL syntax. 
 \item Introductory statistical coding python proficiency.
 \item Short video presentation of notebooks skills.
 \item Strengthen voice in expressing statistical analysis. 
@@ -97,11 +102,14 @@ In this class we will cover an introduction into statistical computing which is 
 
 \section*{Texts}
 
+You are not required to purchase these texts, the online versions are fine (although they are both great reference books)
 \begin{itemize}
 \item Cunningham, Scott. 2021. Causal Inference: The Mixtapes.  \href{https://mixtape.scunning.com/}{\tt\bf  Online version is fine.} 
 
 \item Hastie, Tibshirani, Friedman. 2009.  The Elements of Statistical Learning  \href{https://hastie.su.domains/ElemStatLearn/}{\tt\bf  Online version is fine.} 
 
+
+We will also use many online reference materials which will be listed in the github repo. 
 \end{itemize} 
 
 
@@ -109,6 +117,16 @@ In this class we will cover an introduction into statistical computing which is 
 You are expected to follow the Georgia Institute of Technology Honor Code at all times. 
 For any questions involving these or any other Academic Honor Code issues, please consult me or
 http://www.honor.gatech.edu.
+
+Notice that for homeworks, I am completely fine with students working together and using any online materials. That said in many of the homeworks you will each receive different data, and you are responsible for explaining the outcomes yourself.
+
+All videos must be done by yourself, cover your own data (or data seed), and explain your own outputs. If your video presentation does not present your own results, or I do not feel that you can explain your code or results in a way that makes it clear that you understand how it is working you will not receive credit for that assignment. 
+
+
+\section*{canvas}
+Communication   about   the   course   and   other   course   materials   is   available   on   Georgia   Tech’s
+Canvas system.  I will upload additional course materials and post course announcements on the
+course page.  You may access Canvas at https://canvas.gatech.edu/.
 
 
 \subsection*{Grading Policy}
@@ -119,14 +137,50 @@ http://www.honor.gatech.edu.
 \item \underline{\textbf{5\%}} extra credit (see below). 
 \end{itemize}
 
-\subsubsection*{Homework Videos}
 
-Each week that we do not an exam (see schedule) you will have to submit a *no longer than* 2 minute video of your notebook assignment for that week, along with the notebook. You are welcome to work with others on the homework assignment, but your video and your code/notebook will need to be your own. The videos will reviewed by the TA and given an 0-100\% grade. This is homework so my intention here is that a good shot at the work, and admitting what you can't get should be a 100\%. The general idea here is to help you build your voice of your analysis. The grading rubric for the assignment are:
+Your final grades transfer to the Georgia Tech
+grading system as follows:
+
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+  \hline
+  \multicolumn{4}{|c|}{Grading Rubic} \\
+  \hline
+ A & 4.0 &Excellent&90\%-100\%\\
+  \hline
+  B   & 3.0    &Good&   80\%-89.99\%\\
+  \hline
+C&  2.0 & Satisfactory   &70\%-79.99\%\\
+\hline
+D&1.0 & Passing&  60\%-69.99\%\\
+\hline
+  F    &0.0 & Failure& < 60\%\\
+  \hline
+ \end{tabular}
+
+ I  reserve   the   right   to   increase   all   final   grades   equally   if   the   material   is   more   difficult   than
+ expected, but this is unlikely.   At the end of the semester your final grade cannot be changed
+ with extra credit or makeup opportunities; this is for fairness to all students.
+ \subsubsection*{Pass $/$fail policy}
+ If you are taking the class pass/fail, you must achieve a C grade to earn a pass in the class.
+ Please reach out to me at the beginning of the semester if you are taking the class pass/fail.
+
+
+\subsubsection*{Homework Videos}
+Homeworks are due on Thursday morning at 10AM EST. Submit the video (youtube link) and colab notebook link to Canvas. 
+
+\textbf{*** Because I am dropping your two lowest, I am not accepting late homework. Homework submitted at 10:01AM will not be accepted. ***}
+
+
+Each week that we do not have an exam (see schedule) you will have to submit a *no longer than* 2 minute video of your notebook assignment for that week, along with the notebook. You are welcome to work with others on the homework assignment, but your video and your code/notebook will need to be your own. The videos will reviewed by the TA and given an 0-100\% grade. This is homework so my intention here is that a good shot at the work, and admitting what you can't get should be a 100\%. The general idea here is to help you build your voice of your analysis. The grading rubric for the assignment are:
   \begin{itemize}
 \item \underline{\textbf{50\%}} does the notebook achieve the directions, or at least make a solid stab at and explain what they couldn't get in their video.  
 	\item \underline{\textbf{40\%}} does the video express the ideas of the analysis in a straightforward that explains what the author believes and how confident they are in the results. Just screen cast the notebook and explain what you did, and even what you didn't understand. 
 \item \underline{\textbf{10\%}} is the video under 2 minutes. Not that faster is always better, but there are a lot of videos to grade and the point of this whole thing is learn to trust your voice, explain how much you believe it, and also state stuff that you didn't get. If you can do that in 30 seconds, all the better for all of us.   
 \end{itemize}
+
+Our repo will have suggestions on how to record, but you will not be reviewed on production quality, just the results. 
+
+\subsubsection*{Homework Videos}
 
 \subsubsection*{Exams}
 Midterm and final will be cumulative and cover statistical concepts and test the ability to read output of statistical code and explain the outputs in well formulated arguments that address central tendency and dispersion.
@@ -140,45 +194,188 @@ The repo for this class will include links to *open source* videos, lectures, pa
 
 
 
-\subsection*{Special Accommodations}
+\subsection*{Freedom of expression}
+As   a   faculty   member   at   Georgia   Tech,   I   respect   your   rights   to   the   freedom   of   speech   and
+expression.  I am also committed to maintaining an orderly learning environment for all students
+and ensuring that all facilities are used in a way that facilitate teaching, learning, and research.
+Therefore, you should treat your peers and instructor respectfully in discussion.  Disagreements
+are likely to happen. When they do, you are expected to disagree respectfully and to keep your
+discussion focused on evidence.
+Discussions in this class are expected to take place solely within the course.   Thus, statements
+made during class should not be quoted on social media unless the individual being quoted has
+provided their express permission.  This applies to the instructor, students, and classroom guests.
+This policy is meant to protect student privacy and create a safe environment to learn.
+\subsection*{Academic integrity}
+“I commit to uphold the ideals of honor and integrity by refusing to betray the trust bestowed
+upon me as a member of the Georgia Tech community.”
+Georgia   Tech   aims   to   cultivate   a   community   based   on   trust,   academic   integrity,   and   honor.
+Students   are   expected   to   act   according   to   the   highest   ethical   standards.     For   information   on
+Georgia   Tech's   Academic   Honor   Code,   please   visit
+\href{http://www.catalog.gatech.edu/policies/honor-code/}{\tt\bf http://www.catalog.gatech.edu/policies/honor-code/}  or 
+\href{http://www.catalog.gatech.edu/rules/18/.}{\tt\bf http://www.catalog.gatech.edu/rules/18/.} 
+Academic integrity is extremely important to me.
+Any student suspected of cheating or plagiarizing on an exam or assignment will be reported to
+the Office of Student Integrity, who will investigate the incident and identify the appropriate
+penalty for violations.
+\subsection*{Student-faculty expectations agreement}
+It   is   important   to   strive   for   an   atmosphere   of   mutual   respect,   acknowledgement,   and
+responsibility   between   faculty   members   and   the   student   body.   See
+\href{http://www.catalog.gatech.edu/rules/22/.}{\tt\bf http://www.catalog.gatech.edu/rules/22/.} 
+ for an articulation of some basic expectations that you
+can have of me and that I have of you. In the end, simple respect for knowledge, hard work, and
+cordial   interactions   will   help   build   the   environment   we   seek.   Therefore,   I   encourage   you   to
+remain committed to the ideals of Georgia Tech while in this class.
+\subsection*{Athletics absences}
+If you are a student athlete, you must obtain statements of approved absence from the Office of
+the Registra (\href{https://registrar.gatech.edu/}{\tt\bf https://registrar.gatech.edu/}) one week in advance of your planned absence.  I will
+accommodate your schedule if I have enough time, so please get in touch early.
+\subsection*{Accommodations for students with disabilities}
+If you are a student with learning needs that require special accommodation, contact the Office
+of   Disability   Services   at   (404)   894-2563   or \href{http://disabilityservices.gatech.edu/}{\tt\bf http://disabilityservices.gatech.edu/}    as   soon   as
+possible to make an appointment to discuss your special needs and to obtain an accommodations
+letter.  Please also e-mail me as soon as possible to set up a time to discuss your learning needs.
+Your accommodations cannot be put into place until you discuss them with me. 
+\subsection*{This syllabus is subject to change}
+At any time for any reason, I may need to update this syllabus.  I will inform you immediately if
+I make any changes.
 
-If you need any special accommodations due to a physical or learning disability, please let me
-know during the first week of class. In order to receive the requested accommodations you will
-need to obtain a form from the Access Disabled Assistance Program for Tech Students (ADAPTS)
-and give me this form. The ADAPTS Office is located in the Smithgall Student Services Building,
-Suite 210 and the website is http://www.adapts.gatech.edu.
-Also, if you will be missing any classes for religious holidays or other events, let me know as soon
-as you know you will be missing class. You will still be required to know the material from that
-class period.
-
-\subsection*{Policy on Children in Class (adopted from \@guygrossman)}
-
-\begin{enumerate}
-\item You and your baby are welcome in class anytime.
-\item For older children and babies, I understand that minor illnesses and unforeseen disruptions in childcare often put parents in the position of having to choose between missing class to stay home with a child and leaving them with someone you or the child does not feel comfortable with. While this is not meant to be a long-term childcare solution, occasionally bringing a child to class in order to cover gaps in care is perfectly acceptable.
-\item I ask that all students work with me to create a welcoming environment that is respectful of all forms of diversity, including diversity in parenting status.
-\item In all cases where babies and children come to class, I ask that you sit close to the door so that if your little one needs special attention and is disrupting learning for other students, you may step outside until their need has been met. Non-parents in the class, please reserve seats near the door for your parenting classmates.
-\item Finally, I understand that often the largest barrier to completing your coursework once you become a parent is the tiredness many parents feel in the evening once children have finally gone to sleep. The struggles of balancing school and childcare are exhausting! I hope that you will feel comfortable disclosing your student-parent status to me. This is the first step in me being able to accommodate any special needs that arise. While I maintain the same high expectations for all students in my classes regardless of parenting status, I am happy to problem solve with you in a way that makes you feel supported as you strive for school-parenting balance. 
-\end{enumerate}
 
 \subsection*{Schedule (subject to change)}
-\SetDate[22/08/2022]
-\week{Week 01} Load data, summary stats, simple graphs, making videos.
-\week{Week 02} Continuous vs discrete, counts, descriptive stats.
-\week{Week 03} Dependent vs independent, light causality. 
-\week{Week 04} Probability review. 
-\week{Week 05} Probability review 2: Conditional Probability.
-\week{Week 06} Summation notation. 
-\week{Week 07} Correlation and model introduction. 
-\week{Week 08} Review and Midterm: conditional prob to correlation.
-\week{Week 09} Average Treatment Effect.
-\week{Week 10} Linear regression. 
-\week{Week 11} Linear regression 2. 
-\week{Week 12} Standard error. 
-\week{Week 13} Test for significance. 
-\week{Week 14} Continuous vs discrete modeling. 
-\week{Week 15} Bring it all together. 
-\week{Week 16} Final: ATE and linear reg. 
+
+\begin{itemize}
+  \item \underline{\textbf{Week 1 (2022/08/22 - 2022/08/26):}} Load data, summary stats, simple graphs, making videos.
+  \begin{itemize}
+    \item 2022/08/22: Introductions, syllabus, colab intro.
+    \item 2022/08/24: Colab deep dive, python intro.
+    \item 2022/08/26: Data types, summary statistics.
+  \end{itemize}
+  
+  \item \underline{\textbf{Week 2 (2022/08/29 - 2022/09/02):}} Continuous vs discrete, counts, descriptive stats.
+  \begin{itemize}
+    \item 2022/08/29: Colab and summary statistics type reveiw. 
+    \item 2022/08/31: Colab deep dive, python intro, discreet vs continuous.
+    \item 2022/09/01: HW1 due: Loading data into colab and making first video.
+    \item 2022/09/02: Summary stats tables: mean, median, and standard deviation. 
+  \end{itemize}
+
+  \item \underline{\textbf{Week 3 (2022/09/05 - 2022/09/09):}} Dependent vs independent, light causality. 
+  \begin{itemize}
+    \item 2022/09/05: LABOR DAY BREAK
+    \item 2022/09/07: Reveiw mean, median, standard deviation. 
+    \item 2022/09/08: HW2 due: mean, median, standard deviation.
+    \item 2022/09/09: Dependent vs indendepent variable, deep dive a data frame. 
+  \end{itemize}
+
+
+  \item \underline{\textbf{Week 4 (2022/09/12 - 2022/09/16):}} Probability review. 
+  \begin{itemize}
+    \item 2022/09/12: Reveiw depdentent vs independent, discuss probability. 
+    \item 2022/09/14: Rules of probability. 
+    \item 2022/09/15: HW3 due: depvar and covariates, light probabilty exercises.
+    \item 2022/09/16: Review  of probability rules. 
+  \end{itemize}
+
+  \item \underline{\textbf{Week 5 (2022/09/19 - 2022/09/23):}} Probability review 2: Conditional Probability.
+  \begin{itemize}
+    \item 2022/09/19: Conditional probability, bayes rule.
+    \item 2022/09/21: More of that, it's tricky. 
+    \item 2022/09/22: HW4 due: some fun stuff with conditional probabilty and functions.
+    \item 2022/09/23: Pull together probabilty review. 
+  \end{itemize}
+
+
+  \item \underline{\textbf{Week 6 (2022/09/26 - 2022/09/30):}} Summation notation. 
+  \begin{itemize}
+    \item 2022/09/26: We are going to have to spend some time on notation, here is where we dive  in to the summation operator.
+    \item 2022/09/28: Some work on the error term to the sum of squares. 
+    \item 2022/09/08: HW5 due: turn that math into code using the summation operator and functions.
+    \item 2022/09/30: review of stats proofs and summation notation. We are going to need it quite a bit. 
+  \end{itemize}
+
+
+  \item \underline{\textbf{Week 7 (2022/10/03 - 2022/10/07):}} Correlation and model introduction. 
+  \begin{itemize}
+    \item 2022/10/03: (progress report) Introduction to model building and correlation of independent and dependent variables.
+    \item 2022/10/07: No semester is complete with correlation vs causation, this is that lecture. 
+    \item 2022/09/08: HW6 due: correlation vs causation the notebook. 
+    \item 2022/10/09: Digging further into correlation. 
+  \end{itemize}
+
+  \item \underline{\textbf{Week 8 (2022/10/10 - 2022/10/14):}} Review and Midterm: conditional prob to correlation.
+  \begin{itemize}
+    \item 2022/10/10: Reveiw probabilty rules. 
+    \item 2022/10/12: Review correlation. 
+    \item 2022/10/14: MIDTERM EXAM - you got this. 
+  \end{itemize}
+
+  \item \underline{\textbf{Week 9 (2022/10/17 - 2022/10/21):}} Average Treatment Effect.
+  \begin{itemize}
+    \item 2022/10/17: FALL BREAK 
+    \item 2022/10/19: Review of midterm material. Discusss average treatment effect. 
+    \item 2022/10/21: Average treatment effect further discussion. 
+  \end{itemize}
+
+  \item \underline{\textbf{Week 10 (2022/10/24 - 2022/10/28):}} Linear regression. 
+  \begin{itemize}
+    \item 2022/10/24: Error term, sum of squared residual, and best fit line. 
+    \item 2022/10/26: Linear regression summation notation. 
+    \item 2022/10/27: HW7 due: linear regression model in sklearn.
+    \item 2022/10/28: Futher discussion on linear regression model assumptions. 
+    \item 2022/10/29: WITHDRAWAL DEADLINE
+  \end{itemize}
+
+
+  \item \underline{\textbf{Week 11 (2022/10/31 - 2022/11/04):}} Linear regression 2. 
+  \begin{itemize}
+    \item 2022/10/31: Reveiw of simple regression and model assumptions.
+    \item 2022/11/02: Linear model predictions.
+    \item 2022/11/03: HW8 due: Linear model predictions. 
+    \item 2022/11/04: More talk of linear model assumptions. 
+  \end{itemize}
+
+
+  \item \underline{\textbf{Week 12 (2022/11/07 - 2022/11/11):}} Standard error. 
+  \begin{itemize}
+    \item 2022/11/07: Dispersion, and why it matters. We're really starting to pull everything together now.
+    \item 2022/11/09: Calulating standard errors. 
+    \item 2022/11/10: HW9 due: linear model dispersion notebook. 
+    \item 2022/11/11: More time on standard errors.
+  \end{itemize}
+
+
+  \item \underline{\textbf{Week 13 (2022/11/14 - 2022/11/18):}} Test for significance. 
+  \begin{itemize}
+    \item 2022/11/14: What is significance?
+    \item 2022/11/16: Calcuating significance and expressing in your results. 
+    \item 2022/11/17: HW10 due: tie it all together with model and significance testing. 
+    \item 2022/11/18: Further digressions on testing significance. 
+  \end{itemize}
+
+
+  \item \underline{\textbf{Week 14 (2022/11/21 - 2022/11/25):}} Continuous vs discrete modeling. 
+  \begin{itemize}
+    \item 2022/11/21: Bonus material: continuous vs discreete model, and why you would care. 
+    \item 2022/11/23: THANKSGIVING BREAK
+    \item 2022/11/25: THANKSGIVING BREAK
+  \end{itemize}
+
+
+  \item \underline{\textbf{Week 15 (2022/11/28 - 2022/12/02):}} Bring it all together. 
+  \begin{itemize}
+    \item 2022/11/28: Review week (nothing new): Working together we'll take a continuous and discreet problem: tell summary stats
+    \item 2022/11/30: Continue above with build a linear model, work out the math, code it up
+    \item 2022/12/02: Continue the above show model fit and significance tests. 
+  \end{itemize}
+
+  \item \underline{\textbf{Week 16 (2022/12/05 - 2022/12/09):}} Final Exam
+  \begin{itemize}
+    \item 2022/12/28: Review
+    \item 2022/12/30: READING DAY
+    \item 2022/12/02: Final exam
+  \end{itemize}
+\end{itemize}
+
+
 
 
 \end{document}
