@@ -1,0 +1,20 @@
+## Python Links
+  * [Grey Hat Python](python/gray-hat-python.pdf)
+  * [Violent Python](python/Violent%20Python%20A%20Cookbook%20for%20Hackers,%20Forensic%20Analysts,%20Penetration%20Testers%20and%20Security%20Engineers%20(%20PDFDrive%20).pdf)
+  * [Advanced Python Development](python/Advanced%20Python%20Development.pdf)
+  * [Black Hat Python. Język Python dla hakerów i pentesterów](python/Black%20hat%20Python%20Python%20programming%20for%20hackers%20and%20pentesters%20by%20Seitz,%20Justin%20(z-lib.org).pdf)
+  * [Black Hat Python programming for hackers and pentesters](python/Black%20hat%20Python%20Python%20programming%20for%20hackers%20and%20pentesters%20by%20Seitz,%20Justin%20(z-lib.org).pdf)
+  * [Classic Computer Science Problems in Python](python/Classic%20Computer%20Science%20Problems%20in%20Python.pdf)
+  * [Learn Python Programming](python/Learn%20Python%20Programming_%20A%20beg%20-%20Fabrizio%20Romano.pdf)
+  * [Python One-Liners](python/Python%20One-Liners.pdf)
+  * [Web Scraping with Python](python/Web%20Scraping%20with%20Python%20Collecting%20More%20Data%20from%20the%20Modern%20Web%20(%20PDFDrive%20).pdf)
+  * [Python, PyGame and Raspberry Pi Game Development](python/Python,%20PyGame%20and%20Raspberry%20Pi%20Game%20Development.pdf)
+  * [Serious Python](python/Serious%20Python.pdf)
+  * [Tiny Python Projects](python/Tiny%20Python%20Projects.epub)
+  * [DevOps in Python: Infrastructure as Python](python/DevOps%20in%20Python%20Infrastructure%20as%20Python.pdf)
+  * [Expert Python Programming (compressed PDF)](https://github.com/redcode-labs/Library/blob/9acd86d84daec7023f86925b48848b906c590b76/python/Expert%20Python%20Programming%2C%202nd%20Edition.tar.xz)
+  * [Intermediate Python](https://github.com/redcode-labs/Library/blob/9acd86d84daec7023f86925b48848b906c590b76/python/Intermediate%20Python%20by%20Yasoob%2C%20Muhammad%20Khalid%2C%20Ullah%20(z-lib.org).pdf)
+  * [Learn Python the Right Way (pdf](python/learn-python-the-right-way.pdf), [epub)](python/learn-python-the-right-way.epub)
+  * [Robust Python](security/Robust%20Python.pdf)
+
+_List can always be edited._
