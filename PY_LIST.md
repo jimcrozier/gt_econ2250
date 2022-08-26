@@ -2,7 +2,7 @@
   * [Grey Hat Python](python/gray-hat-python.pdf)
   * [Violent Python](python/Violent%20Python%20A%20Cookbook%20for%20Hackers,%20Forensic%20Analysts,%20Penetration%20Testers%20and%20Security%20Engineers%20(%20PDFDrive%20).pdf)
   * [Advanced Python Development](python/Advanced%20Python%20Development.pdf)
-  * [Black Hat Python. Język Python dla hakerów i pentesterów](python/Black%20hat%20Python%20Python%20programming%20for%20hackers%20and%20pentesters%20by%20Seitz,%20Justin%20(z-lib.org).pdf)
+  * [Black Hat Python](python/Black%20hat%20Python%20Python%20programming%20for%20hackers%20and%20pentesters%20by%20Seitz,%20Justin%20(z-lib.org).pdf)
   * [Black Hat Python programming for hackers and pentesters](python/Black%20hat%20Python%20Python%20programming%20for%20hackers%20and%20pentesters%20by%20Seitz,%20Justin%20(z-lib.org).pdf)
   * [Classic Computer Science Problems in Python](python/Classic%20Computer%20Science%20Problems%20in%20Python.pdf)
   * [Learn Python Programming](python/Learn%20Python%20Programming_%20A%20beg%20-%20Fabrizio%20Romano.pdf)
