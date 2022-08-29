@@ -18,7 +18,6 @@ Statistics for Econ
 - [Video on python basics - "Python for Beginners - Learn Python in 1 Hour"](https://www.youtube.com/watch?v=kqtD5dpn9C8)
 - [Video on python basic - "Python Crash Course For Beginners"](https://www.youtube.com/watch?v=JJmcL1N2KQs0)
 
-- Sanchit made a list of helpful python resources [here](PY_LIST.md)
 
 ### SQL
 [This thread has a ton of resources](https://twitter.com/AllenDowney/status/1556702573633101825)
