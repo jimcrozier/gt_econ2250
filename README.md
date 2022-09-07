@@ -14,6 +14,10 @@ Statistics for Econ
 - [Sargent, Stachurski (2019) Python for Quant Econ text (pdf)](https://delong.typepad.com/files/quantitative-economics-with-python.pdf)
 
 ### Python 
+
+#### Python econometrics
+- [Excellenct intro to metrics in python (pdf)](https://www.kevinsheppard.com/files/teaching/python/notes/python_introduction_2020.pdf)
+
 #### Python Basics
 - [Video on python basics - "Python for Beginners - Learn Python in 1 Hour"](https://www.youtube.com/watch?v=kqtD5dpn9C8)
 - [Video on python basic - "Python Crash Course For Beginners"](https://www.youtube.com/watch?v=JJmcL1N2KQs0)
