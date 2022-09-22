@@ -1,0 +1,184 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{pythonhighlight}
+
+\usepackage[left=1in,top=1in,right=1in,bottom=1in,headheight=3ex,headsep=3ex]{geometry}
+\usepackage[T1]{fontenc}
+\newcommand{\blankline}{\quad\pagebreak[2]}
+\usepackage{multirow}
+\title{ECON 2250: Statistics for Economists}
+\author{Jim Crozier}
+\date{Fall 2022}
+
+\usepackage[sc]{mathpazo}
+\linespread{1.05}         % Palatino needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+\newcommand{\emdash}{\nobreak-\nobreak\hskip0pt}
+\usepackage[mmddyyyy]{datetime}% http://ctan.org/pkg/datetime
+\usepackage{advdate}% http://ctan.org/pkg/advdate
+\newdateformat{syldate}{\twodigit{\THEMONTH}/\twodigit{\THEDAY}}
+\newsavebox{\MONDAY}\savebox{\MONDAY}{Mon}% Mon
+
+\newcommand{\week}[1]{%
+%  \cleardate{mydate}% Clear date
+% \newdate{mydate}{\the\day}{\the\month}{\the\year}% Store date
+  \paragraph*{\kern-2ex\quad #1, \syldate{\today} - \AdvanceDate[4]\syldate{\today}:}% Set heading  \quad #1
+%  \setbox1=\hbox{\shortdayofweekname{\getdateday{mydate}}{\getdatemonth{mydate}}{\getdateyear{mydate}}}%
+  \ifdim\wd1=\wd\MONDAY
+    \AdvanceDate[7]
+  \else
+    \AdvanceDate[7]
+  \fi%
+}
+
+
+
+\usepackage{setspace}
+\usepackage{multicol}
+%\usepackage{indentfirst}
+\usepackage{fancyhdr,lastpage}
+\usepackage{url}
+\pagestyle{fancy}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{layout}   
+\lhead{}
+\chead{}
+\rhead{\footnotesize Statistics for Economics  -- Fall 2022}
+\lfoot{}
+\cfoot{\small \thepage/\pageref*{LastPage}}
+\rfoot{}
+
+\usepackage{array, xcolor}
+\usepackage{color,hyperref}
+\definecolor{clemsonorange}{HTML}{B3A369}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=clemsonorange,urlcolor=clemsonorange,
+            anchorcolor=clemsonorange,citecolor=black}
+
+
+
+
+\begin{document}
+
+
+\maketitle
+
+\blankline
+
+Mid term practice 1
+
+\vspace{10 mm}
+
+Suppose X is a column in a panda's dataframe and $x_1, x_2, ..., x_n$ are the rows of X where n is the number of observations. For reference, the python code for the math we are about to type is.
+
+\begin{python}
+import pandas as pd
+import numpy as np
+df = pd.DataFrame({'X':[5, 7, 10]})
+n_obs = len(df)
+mean_x = df["X"].mean()
+np.sqrt(sum((df["X"] - mean_x)**2)/(n_obs-1))
+\end{python}
+
+\subsection{jargony jargon}
+Define the following words:
+
+\begin{itemize}
+  \item scalar
+  \item vector 
+  \item dataframe 
+  \item sum
+  \item quantile
+  \item median
+  \item 
+\end{itemize}
+
+
+\subsection{ Mean to Standard Deviation }
+
+Use the summation operator ($\sum$) to express the sum of x from 1 to n. I just want the mathematical expression here.
+\newline 
+\newline
+\newline 
+
+
+ What does the scalar from above represent? 
+\newline 
+\newline
+\newline 
+
+Use the summation operator ($\sum$) to express the average of X. I just want the mathematical expression here.
+\newline 
+\newline
+\newline 
+
+
+ What does the scalar from above represent? 
+\newline 
+\newline
+\newline 
+
+
+Refer to the above scalar as \emph{mean$\_$x} and write an equation for subtracting off \emph{mean$\_$x} from element of X. Refer to the elements as $x_i$, and I only want the equation. 
+\newline 
+\newline
+\newline 
+
+
+What does the list (vector) from above represent? How many rows will it have?
+\newline 
+\newline
+\newline 
+
+Write an equation for squaring the above equation.
+\newline 
+\newline
+\newline 
+
+
+What does the list (vector) from above represent? How many rows will it have?
+\newline 
+\newline
+\newline 
+
+
+Write an equation for summing the squared elements above and dividing by n. This should look kind of similar to taking the average above.
+\newline 
+\newline
+\newline 
+
+
+Now take the square of the above equation. What do we call this observation, and what does it represent.
+\newline 
+\newline
+\newline 
+
+
+
+\subsection{  Quantiles : the sorting hat}
+
+Describe how you would find the min and max, and what they represent. 
+\newline 
+\newline
+\newline 
+
+Describe how you find the median? What the core idea behind median and quantiles? What quanitle does the median represent? 
+\newline 
+\newline
+\newline 
+
+What is the difference in finding the median of an even or odd number of observations.
+\newline 
+\newline
+\newline 
+
+
+Why do we care about the difference between the mean or median or other quantiles? 
+\newline 
+\newline
+\newline 
+
+
+\end{document}
