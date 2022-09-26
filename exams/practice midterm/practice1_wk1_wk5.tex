@@ -82,6 +82,17 @@ mean_x = df["X"].mean()
 np.sqrt(sum((df["X"] - mean_x)**2)/(n_obs-1))
 \end{python}
 
+\subsection{summary stats}
+\begin{itemize}
+\item what is the sum of the list above (5,7,10)?
+\item how many observations in the list?
+\item what is the mean of the list?
+\item demean each row (subtract off the mean), show your work to one decimal point. 
+\item square the demeaned values, show your work. 
+\item get the sum of squared values, show your work. 
+\item divide this by n (number of observations). 
+\item just put a square root over it (no need to calculate the sqrt), what is this value called and why does it matter? 
+\end{itemize}
 \subsection{jargony jargon}
 Define the following words:
 
@@ -89,10 +100,26 @@ Define the following words:
   \item scalar
   \item vector 
   \item dataframe 
-  \item sum
+  \item column
+  \item row
+  \item continuous variable, give example 
+  \item discrete variable, give example 
+  \item dependent variable, give example 
+  \item what is pandas, how do you load it into python
+  \item what the sum of a column (vector)
+  \item mean
   \item quantile
   \item median
-  \item 
+  \item summation operator
+  \item marginal probability 
+  \item bayes rule
+  \item $P(A \cup B)$
+  \item $P(A \cap B)$
+  \item $P(A , B)$
+  \item $P(A | B)$
+  \item independent events, what does it imply wrt $P(A | B)$
+  \item mutually exclusive event
+  \item what is a type error?
 \end{itemize}
 
 
@@ -179,6 +206,66 @@ Why do we care about the difference between the mean or median or other quantile
 \newline 
 \newline
 \newline 
+
+
+\subsection{Probability}
+
+
+Explain the rule for finding $P(A \cup B)$. Should this be larger than P(A)? Could it be the same size as P(A), if so how? 
+\newline  
+\newline
+\newline 
+
+
+
+Explain the the term "mutually exclusive" in your own words with regards to $P(A \cup B)$. 
+\newline 
+\newline
+\newline 
+
+What is the $P(A \cup B)$ of two mutually exclusive events with P(A) = 0.1 and P(B) 0.2? Draw a venn diagram to show this. 
+\newline 
+\newline
+\newline 
+
+Referring to the above question, now what if I tell you that the $P(A|B)$ is 0.05, now what the $P(A \cup B)$?  Draw a venn diagram to show this. Draw a venn diagram to show this. 
+\newline 
+\newline
+\newline 
+
+
+
+Explain the rule for finding $P(A \cap B)$. Should this be larger than P(A)? Could it be the same size as P(A), if so how? 
+\newline  
+\newline
+\newline 
+
+
+What is the $P(A \cap B)$ of two independent events with P(A) = 0.1 and P(B) 0.2? Draw a venn diagram to show this. 
+\newline 
+\newline
+\newline 
+
+
+
+Ok, now for some bayes. You might find these familiar. 75$\%$ of the children in Exton school have a dog, and 30$\%$ have a cat. Given that 60$\%$ of those that have cat also have a dog, what percent of those that have a dog also have a cat?
+\newline 
+\newline
+\newline 
+
+
+
+
+In a factory, machine X produces 60$\%$ of the daily output and machine Y produces 40$\%$ of the daily output.
+
+2$\%$of machine X's output is defective, and 1.5$\%$ of machine Y's output is defective.
+
+One day, an item was inspected at random and found to be defective. What is the probability that it was produced by machine X?
+
+
+
+
+
 
 
 \end{document}
