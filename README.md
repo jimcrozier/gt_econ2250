@@ -13,6 +13,15 @@ Statistics for Econ
 - [Bruce E. Hansen econometric course and textbook](https://perhuaman.files.wordpress.com/2014/06/econometrics-bruce-hansen-2014.pdf)
 - [Sargent, Stachurski (2019) Python for Quant Econ text (pdf)](https://delong.typepad.com/files/quantitative-economics-with-python.pdf)
 
+### Helpful Bayes resources
+- https://www.youtube.com/watch?v=OByl4RJxnKA (longer more in depth) 
+- https://www.youtube.com/watch?v=XQoLVl31ZfQ (shorter)
+- https://www.statisticshowto.com/probability-and-statistics/probability-main-index/bayes-theorem-problems/ (an article with helpful problem walkthroughs)
+
+### Other helpful resources
+- https://www.westga.edu/academics/research/vrc/assets/docs/confidence_intervals_notes.pdf (confidence intervals)
+- https://www.investopedia.com/terms/t/t-test.asp (t-tests explained)
+
 ### Python 
 
 #### Python econometrics
