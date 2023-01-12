@@ -3,11 +3,8 @@ Statistics for Econ
 
 
 ## Free courses and resources 
+These have been added by prior students of this course. Feel free to make a pull request with any new material you find that you think might help other people learn stats and python. 
 
-
-### Stats
-
-- [Freecodecamp Stats Intro](https://www.freecodecamp.org/news/top-statistics-concepts-to-know-before-getting-into-data-science/)
 
 ### Econometrics
 - [Bruce E. Hansen econometric course and textbook](https://perhuaman.files.wordpress.com/2014/06/econometrics-bruce-hansen-2014.pdf)
